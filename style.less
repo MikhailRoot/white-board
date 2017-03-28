@@ -1,0 +1,232 @@
+/*
+Theme Name: White board
+Author URI: https://mikhailroot.ru
+Description: Simple bootstrap based blog theme
+Version: 1.0.0
+License: MIT
+License URI: http://opensource.org/licenses/MIT
+Text Domain: white-board
+Domain Path: /languages/
+*/
+@footer-bg:lightgray;
+@main-blue:#337ab7;
+
+/*states colors from plugin*/
+@blue:#87cefa;
+@salmon:lightsalmon;
+@green:#b6fa00;
+@gray:#b6b6b6;
+@gold:gold;
+
+.navbar-header {
+  display: inline-block;
+  padding: 0 1em;
+  vertical-align: middle;
+  margin: 0;
+}
+h1.site-title-heading {
+  padding: 0 1rem;
+  display: inline;
+  vertical-align: middle;
+}
+.navbar {
+  border-radius: 0;
+  border: none;
+  border-bottom: solid 1px @main-blue;
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-collapse.navbar-primary-collapse.collapse {
+    display: inline-block!important;
+    vertical-align: middle;
+  }
+
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+  //border:none;
+}
+
+.navbar-default .navbar-nav>li>a{
+  transition:all .4s;
+}
+.navbar-default .navbar-nav>li>a:hover{
+  background: lightskyblue;
+  color: white;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  ul#menu-top-menu li.current-menu-item a {
+    border-top: solid 2px @main-blue;
+  }
+
+  ul#menu-top-menu li.current-menu-item a:after {
+    content: '';
+    display: inline-block;
+    border-left: 0.5em solid @main-blue;
+    border-right: 0.5em solid @main-blue;
+    border-top: 0.5em solid @main-blue;
+    border-bottom: solid 0.5em transparent;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  ul#menu-top-menu li.current-menu-item a:before {
+    content: '';
+    display: inline-block;
+    border-left: 0.86em solid @main-blue;
+    border-right: 0.5em solid transparent;
+    border-top: 0.5em solid transparent;
+    border-bottom: solid 0.5em transparent;
+    vertical-align: middle;
+  }
+}
+
+article {
+
+  margin-bottom: 2rem;
+  .entry-meta {
+    color: lightgray;
+    margin-bottom: 1em;
+  }
+  .entry-meta-category-tag {
+    padding: 1em 0;
+    span.cat-links:before {
+      display: inline-block;
+      content: 'Categories:';
+    }
+    span.tags-links:before {
+      display: inline-block;
+      content: 'Tags: ';
+      margin-left: 2em;
+    }
+  }
+
+}
+
+//blog list
+.blog,.archive{
+
+ article{
+   box-shadow: -2px 3px 0.5em lightgrey;
+   padding: 2rem;
+ }
+
+}
+
+//comment buttons etc
+a.btn.btn-default.btn-xs .comment-total {
+  padding: 0 0.5em 0 1em;
+  vertical-align: text-top;
+}
+
+// widgets
+.widget_meta {
+  ul {
+    list-style: none;
+    padding: 0.5em;
+  }
+}
+
+//comments
+.comments-area {
+  margin-top: 3em;
+  border-top: solid 2px @main-blue;
+
+  h2.comments-title {
+    font-size: 24px;
+  }
+
+  .comment-respond{
+    margin-top: 2em;
+  }
+  h3.comment-reply-title {
+    padding: 0.5em 0;
+  }
+  .comment-form {
+    padding: 0 1em;
+  }
+
+  ul.children {
+    list-style: none;
+  }
+  .comment-author.vcard {
+    b.fn {
+      margin-left: 1em;
+    }
+    img.avatar {
+      border-radius: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+  }
+
+}
+
+// time states
+.timeState{
+  .dateTill{
+    padding:0.5em;
+
+    &.future{
+      background: @blue;
+      &.canceled{
+        background: @gray;
+        .human:after {
+          content: '';
+        }
+      }
+      .human:after {
+        display: inline-block;
+        content: 'to accomplish';
+        margin-left: 0.2em;
+      }
+    }
+
+    &.passed{
+      &.todo, &.inprogress, &.delayed{
+        background: @salmon;
+      }
+      &.completed{
+        background:@green;
+      }
+
+      .human:after {
+        display: inline-block;
+        content: 'ago';
+        margin-left: 0.2em;
+      }
+
+    }
+  }
+
+}
+
+// wrapper and sticky footer
+.wrapper{
+  min-height:100vh;
+  margin-bottom: -6rem;
+}
+.wrapper:after{
+  content:' ';
+  display: block;
+  height: 10rem;
+}
+
+.footer {
+  height: 6rem;
+  width: 100%;
+  background-color: @footer-bg;
+  .credits{
+    line-height:6rem;
+    padding:0 2rem;
+    text-align: center;
+  }
+}
+

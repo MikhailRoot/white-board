@@ -1,0 +1,178 @@
+/*
+Theme Name: White board
+Author URI: https://mikhailroot.ru
+Description: Simple bootstrap based blog theme
+Version: 1.0.0
+License: MIT
+License URI: http://opensource.org/licenses/MIT
+Text Domain: white-board
+Domain Path: /languages/
+*/
+/*states colors from plugin*/
+.navbar-header {
+  display: inline-block;
+  padding: 0 1em;
+  vertical-align: middle;
+  margin: 0;
+}
+h1.site-title-heading {
+  padding: 0 1rem;
+  display: inline;
+  vertical-align: middle;
+}
+.navbar {
+  border-radius: 0;
+  border: none;
+  border-bottom: solid 1px #337ab7;
+  background: none;
+}
+@media (min-width: 768px) {
+  .navbar-collapse.navbar-primary-collapse.collapse {
+    display: inline-block !important;
+    vertical-align: middle;
+  }
+}
+.navbar-default .navbar-nav > li > a {
+  transition: all .4s;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  background: lightskyblue;
+  color: white;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  ul#menu-top-menu li.current-menu-item a {
+    border-top: solid 2px #337ab7;
+  }
+  ul#menu-top-menu li.current-menu-item a:after {
+    content: '';
+    display: inline-block;
+    border-left: 0.5em solid #337ab7;
+    border-right: 0.5em solid #337ab7;
+    border-top: 0.5em solid #337ab7;
+    border-bottom: solid 0.5em transparent;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+  }
+}
+@media (max-width: 767px) {
+  ul#menu-top-menu li.current-menu-item a:before {
+    content: '';
+    display: inline-block;
+    border-left: 0.86em solid #337ab7;
+    border-right: 0.5em solid transparent;
+    border-top: 0.5em solid transparent;
+    border-bottom: solid 0.5em transparent;
+    vertical-align: middle;
+  }
+}
+article {
+  margin-bottom: 2rem;
+}
+article .entry-meta {
+  color: lightgray;
+  margin-bottom: 1em;
+}
+article .entry-meta-category-tag {
+  padding: 1em 0;
+}
+article .entry-meta-category-tag span.cat-links:before {
+  display: inline-block;
+  content: 'Categories:';
+}
+article .entry-meta-category-tag span.tags-links:before {
+  display: inline-block;
+  content: 'Tags: ';
+  margin-left: 2em;
+}
+.blog article,
+.archive article {
+  box-shadow: -2px 3px 0.5em #d3d3d3;
+  padding: 2rem;
+}
+a.btn.btn-default.btn-xs .comment-total {
+  padding: 0 0.5em 0 1em;
+  vertical-align: text-top;
+}
+.widget_meta ul {
+  list-style: none;
+  padding: 0.5em;
+}
+.comments-area {
+  margin-top: 3em;
+  border-top: solid 2px #337ab7;
+}
+.comments-area h2.comments-title {
+  font-size: 24px;
+}
+.comments-area .comment-respond {
+  margin-top: 2em;
+}
+.comments-area h3.comment-reply-title {
+  padding: 0.5em 0;
+}
+.comments-area .comment-form {
+  padding: 0 1em;
+}
+.comments-area ul.children {
+  list-style: none;
+}
+.comments-area .comment-author.vcard b.fn {
+  margin-left: 1em;
+}
+.comments-area .comment-author.vcard img.avatar {
+  border-radius: 0.5em;
+  margin-bottom: 0.5em;
+}
+.timeState .dateTill {
+  padding: 0.5em;
+}
+.timeState .dateTill.future {
+  background: #87cefa;
+}
+.timeState .dateTill.future.canceled {
+  background: #b6b6b6;
+}
+.timeState .dateTill.future.canceled .human:after {
+  content: '';
+}
+.timeState .dateTill.future .human:after {
+  display: inline-block;
+  content: 'to accomplish';
+  margin-left: 0.2em;
+}
+.timeState .dateTill.passed.todo,
+.timeState .dateTill.passed.inprogress,
+.timeState .dateTill.passed.delayed {
+  background: #ffa07a;
+}
+.timeState .dateTill.passed.completed {
+  background: #b6fa00;
+}
+.timeState .dateTill.passed .human:after {
+  display: inline-block;
+  content: 'ago';
+  margin-left: 0.2em;
+}
+.wrapper {
+  min-height: 100vh;
+  margin-bottom: -6rem;
+}
+.wrapper:after {
+  content: ' ';
+  display: block;
+  height: 10rem;
+}
+.footer {
+  height: 6rem;
+  width: 100%;
+  background-color: #d3d3d3;
+}
+.footer .credits {
+  line-height: 6rem;
+  padding: 0 2rem;
+  text-align: center;
+}
